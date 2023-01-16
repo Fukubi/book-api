@@ -34,5 +34,5 @@ As of now the API is very basic, you can see here what still needs to be done an
 
 - [x] Serve Endpoints
 - [x] Create middleware for errors
-- [ ] Connect to a backend (choose a stack too)
+- [x] Connect to a backend (choose a stack too)
 - [ ] Create the authentication logic
