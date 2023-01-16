@@ -16,6 +16,14 @@ Or any other package manager that you want to use and after that use
 pnpm dev
 ```
 
+## Run tests
+
+You can run the tests using
+
+```bash
+pnpm test
+```
+
 ## TODO
 
 As of now the API is very basic, you can see here what still needs to be done and what is already done
