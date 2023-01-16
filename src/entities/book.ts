@@ -1,10 +1,21 @@
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 import { EmptyNameException, EmptyPublisherNameException, EmptyWriterNameException, ReleaseDateAfterTodayException } from '../exceptions/book-exceptions'
 
+@Entity()
 export class Book {
+  @PrimaryGeneratedColumn({ name: 'id' })
   private readonly _id: number | null
+
+  @Column({ name: 'name', nullable: false })
   private _name: string
+
+  @Column({ name: 'writerName', nullable: false })
   private _writerName: string
+
+  @Column({ name: 'releaseDate', nullable: false })
   private _releaseDate: Date
+
+  @Column({ name: 'publisher', nullable: false })
   private _publisher: string
 
   constructor (name: string, writerName: string, releaseDate: Date, publisher: string, id: number | null = null) {

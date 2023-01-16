@@ -1,8 +1,9 @@
 import { Router } from 'express'
 import { BookController } from './controller/book-controller'
-import { InMemoryBookRepository } from './repositories/in-memory-book-repository'
+import { Book } from './entities/book'
+import { SQLiteBookRepository } from './repositories/sqlite-book-repository'
 
-const bookController = new BookController(new InMemoryBookRepository())
+const bookController = new BookController(new SQLiteBookRepository())
 export const router = Router()
 
 router.get('/', (req, res, next) => {
@@ -14,7 +15,10 @@ router.get('/', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
-  void bookController.create(req.body).then((book) => {
+  const { name, writerName, releaseDate, publisher } = req.body
+  const book = new Book(name, writerName, releaseDate, publisher)
+
+  void bookController.create(book).then((book) => {
     res.status(201).json(book)
   }).catch((err) => {
     next(err)
