@@ -33,6 +33,6 @@ pnpm test
 As of now the API is very basic, you can see here what still needs to be done and what is already done
 
 - [x] Serve Endpoints
-- [ ] Create middleware for errors
+- [x] Create middleware for errors
 - [ ] Connect to a backend (choose a stack too)
 - [ ] Create the authentication logic
