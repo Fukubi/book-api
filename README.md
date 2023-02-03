@@ -1,6 +1,6 @@
 # Book API
 
-A free and Open Source Book API with Unitary tests using vitest and Authentication using JWT
+A free and Open Source Book API with Unitary tests using vitest
 
 ## Running
 
@@ -35,4 +35,3 @@ As of now the API is very basic, you can see here what still needs to be done an
 - [x] Serve Endpoints
 - [x] Create middleware for errors
 - [x] Connect to a backend (choose a stack too)
-- [ ] Create the authentication logic
