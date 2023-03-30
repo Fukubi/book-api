@@ -1,0 +1,9 @@
+POST http://localhost:3000/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Foo",
+    "writerName": "John Doe",
+    "releaseDate": "2022-04-12T00:00:00Z",
+    "publisher": "Publishing Bests"
+}

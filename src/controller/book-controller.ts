@@ -10,11 +10,9 @@ export class BookController {
   }
 
   async create (book: Book): Promise<Book> {
-    const booksFound = await this.bookRepository.list({
-      name: book.name,
-      writerName: book.writerName,
-      publisher: book.publisher
-    })
+    const booksFound = await this.bookRepository.list({})
+
+    booksFound.filter((value) => value.name === book.name && value.writerName === book.writerName && book.publisher === value.publisher)
 
     if (booksFound.length !== 0) {
       throw new BookAlreadyExistsException()

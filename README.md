@@ -16,6 +16,10 @@ Or any other package manager that you want to use and after that use
 pnpm dev
 ```
 
+### Requests
+
+There is a folder with prepared requests to use with the extension Rest Client on VSCode, it is possible to use it to test the API
+
 ## Run tests
 
 You can run the tests using
@@ -28,6 +32,8 @@ pnpm test
 
 As of now the API is very basic, you can see here what still needs to be done and what is already done
 
-- [ ] Serve Endpoints
-- [ ] Create middleware for errors
-- [ ] Connect to a backend (choose a stack too)
+- [x] Serve Endpoints
+- [x] Create middleware for errors
+- [x] Connect to a backend (choose a stack too)
+- [ ] Configure authentication using JWT
+- [ ] Secure endpoints
